@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: skaff-invest-r-bn
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGO_URL
+        sync: false 
+      - key: PORT
+        value: 5000
+    healthCheckPath: /
